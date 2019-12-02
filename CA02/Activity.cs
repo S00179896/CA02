@@ -8,6 +8,8 @@ namespace CA02
 {
     public class Activity:IComparable<Activity>
     {
+        //properties
+
         public enum ActType { Land, Water, Air}
 
         public decimal Price { get; set; }
@@ -16,6 +18,20 @@ namespace CA02
         public string Description { get; set; }
         public ActType TypeAct { get; set; }
 
+
+        //constructors
+        public Activity()
+        {
+
+        }
+
+        public Activity(string description)
+        {
+            Description = description;
+        }
+
+
+        //methods
         public override string ToString()
         {
             return $"{Category} - {SetDate.ToShortDateString()}";
